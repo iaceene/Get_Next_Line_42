@@ -24,11 +24,11 @@ char *get_next_line(int fd)
 			break;
 	}
 	free(buffer);
-	if (s)
-	{
+	// if (s)
+	// {
 		tmp = s;
 		tmp = ft_sub(tmp);
 		s = ft_nextline(s);
-	}
+	// }
 	return (tmp);
 }

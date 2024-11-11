@@ -64,8 +64,12 @@ int check(char *s)
 char *ft_sub(char *s)
 {
 	int i = 0;
+	// int j = 1;
 	while(s[i] && s[i] != '\n')
 		i++;
+	// case of \n || case of \0EOF
+	// if (s[i])
+	// 	j = 2;
 	char *ret = malloc(i + 1);
 	if (!ret)
 		return (NULL);
@@ -76,5 +80,6 @@ char *ft_sub(char *s)
 		i++;
 	}
 	ret[i] = '\0';
+	printf("ret ::::: %s", ret);
 	return (ret);
 }
