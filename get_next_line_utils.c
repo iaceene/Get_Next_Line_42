@@ -1,7 +1,13 @@
 #include "get_next_line.h"
 
+
 char *ft_join(char *s1, char *s2)
 {
+	int		len;
+	char	*ret;
+	int		j;
+	int		i;
+
 	if (!s1 && !s2)
 		return (NULL);
 	else if(!s1 && s2)
@@ -10,26 +16,25 @@ char *ft_join(char *s1, char *s2)
 		return (s1);
 	else
 	{
-		int len = ft_strlen(s1) + ft_strlen(s2);
-		char *ret = malloc(len + 1);
+		len = ft_strlen(s1) + ft_strlen(s2);
+		ret = malloc(len + 1);
 		if (!ret)
 			return (free(s1), NULL);
-		int i = 0;
-		while(s1[i])
+		i = 0;
+		while (s1[i])
 		{
 			ret[i] = s1[i];
 			i++;
 		}
-		int j = 0;
-		while(s2[j])
+		j = 0;
+		while (s2[j])
 		{
 			ret[i] = s2[j];
 			j++;
 			i++;
 		}
-		free(s1);
 		ret[i] = '\0';
-		return (ret);
+		return (free(s1), ret);
 	}
 }
 
