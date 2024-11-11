@@ -1,4 +1,4 @@
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char *ft_nextline(char *s)
 {
@@ -45,12 +45,14 @@ int check(char *s)
 char *get_next_line(int fd)
 {
 	char *buffer = NULL;
-	static char *s = NULL;
+	static char *s[10240];
 	char *tmp = NULL;
 	int readed = 1;
 
+    if (fd > 10240)
+        return (NULL);
     if (BUFFER_SIZE <= 0 || read(fd, NULL, 0) < 0)
-        return (free(s), s = NULL);
+        return (free(s[fd]), s[fd] = NULL);
 	buffer = malloc(BUFFER_SIZE + 1 * sizeof(char));
 	if(!buffer)
 		return (NULL);
@@ -60,15 +62,15 @@ char *get_next_line(int fd)
 		if(readed <= 0)
 			break;
 		buffer[readed] = '\0';
-		s = ft_join(s, buffer);
-        if (!s)
+		s[fd] = ft_join(s[fd], buffer);
+        if (!s[fd])
             return (free(buffer), NULL);
-		if(check(s))
+		if(check(s[fd]))
 			break;
 	}
 	free(buffer);
-	tmp = s;
+	tmp = s[fd];
 	tmp = ft_sub(tmp);
-	s = ft_nextline(s);
+	s[fd] = ft_nextline(s[fd]);
 	return (tmp);
 }
