@@ -9,6 +9,7 @@ char *get_next_line(int fd);
 char *ft_join(char *s1, char *s2);
 char *ft_nextline(char *s);
 int check(char *s);
+int ft_strlen(char *s);
 char *ft_sub(char *s);
 
 #endif

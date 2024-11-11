@@ -10,76 +10,71 @@ char *ft_join(char *s1, char *s2)
 		return (s1);
 	else
 	{
-	int len = strlen(s1) + strlen(s2);
-	char *ret = malloc(len + 1);
+		int len = ft_strlen(s1) + ft_strlen(s2);
+		char *ret = malloc(len + 1);
 
-	int i = 0;
-	while(s1[i])
-	{
-		ret[i] = s1[i];
-		i++;
-	}
-	int j = 0;
-	while(s2[j])
-	{
-		ret[i] = s2[j];
-		j++;
-		i++;
-	}
-	free(s1);
-	ret[i] = '\0';
-	return (ret);
+		int i = 0;
+		while(s1[i])
+		{
+			ret[i] = s1[i];
+			i++;
+		}
+		int j = 0;
+		while(s2[j])
+		{
+			ret[i] = s2[j];
+			j++;
+			i++;
+		}
+		free(s1);
+		ret[i] = '\0';
+		return (ret);
 	}
 }
 
-char *ft_nextline(char *s)
+int ft_strlen(char *s)
 {
-	int i = 0;
-	if (!s)
-		return NULL;
-	int len = strlen(s);
-	while(s[i] && s[i] != '\n')
-		i++;
-	int j = 0;
-	char *ret = malloc(len - i + 1);
+	int i;
+
+	i = 0;
 	while(s[i])
-	{
-		ret[j++] = s[i++];
-	}
-	free(s);
-	ret[j] = '\0';
-	return (ret);
-}
-int check(char *s)
-{
-	int i = 0;
-	while(s[i])
-	{
-		if(s[i] == '\n')
-			return (1);
 		i++;
-	}
-	return (0);
+	return (i);
 }
+
 char *ft_sub(char *s)
 {
-	int i = 0;
-	// int j = 1;
-	while(s[i] && s[i] != '\n')
-		i++;
-	// case of \n || case of \0EOF
-	// if (s[i])
-	// 	j = 2;
-	char *ret = malloc(i + 1);
-	if (!ret)
-		return (NULL);
+    int i;
+	char *ret;
+	int	new_line;
+	int j;
+
+    if (!s)
+        return NULL;
 	i = 0;
-	while(s[i] && s[i] != '\n')
+	j = 1;
+	new_line = 0;
+    while (s[i] && s[i] != '\n')
+        i++;
+	if (s[i] == '\n')
 	{
-		ret[i] = s[i];
+		new_line = 1;
+		j = 2;
+	}
+    ret = malloc(i + j);
+    if (!ret)
+        return NULL;
+	j = 0;
+    while (j < i)
+	{
+        ret[j] = s[j];
+		j++;
+	}
+	if(new_line)
+	{
+		ret[i] = '\n';
 		i++;
 	}
-	ret[i] = '\0';
-	printf("ret ::::: %s", ret);
-	return (ret);
+    ret[i] = '\0';
+    return ret;
 }
