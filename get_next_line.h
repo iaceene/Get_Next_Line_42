@@ -6,7 +6,7 @@
 /*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 01:57:15 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/12 02:04:23 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:16:49 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ char	*ft_nextline(char *s);
 int		check(char *s);
 int		ft_strlen(char *s);
 char	*ft_sub(char *s);
+char	*ft_strdup(char *s);
 
 #endif
