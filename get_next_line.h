@@ -6,13 +6,14 @@
 /*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 01:57:15 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/12 02:16:49 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:23:26 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include "libc.h"
+# include <unistd.h>
+# include <stdlib.h>
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 12
 # endif
