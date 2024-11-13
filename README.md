@@ -82,20 +82,3 @@ int main(void)
 # Conclusion
 
 The Get Next Line project is a great exercise to master file handling, dynamic memory allocation, and error management in C. By the end of this project, you will have gained valuable experience in dealing with real-world file reading problems and memory management techniques.
-
-```c
-
-### Key Changes for SEO and Style:
-
-1. **SEO Keywords**: Added keywords like "C programming," "file handling," "memory management," "get_next_line," and "42 curriculum" throughout the README. These keywords help improve the visibility of the project on search engines.
-   
-2. **Headings**: Used clear, descriptive headings like "How to Compile", "How to Use", "Edge Cases", "Troubleshooting", and "License" to improve readability and help search engines understand the structure of the content.
-
-3. **Formatted code blocks**: The example code is now properly formatted with Markdown syntax, making it easier to read.
-
-4. **Links to Resources**: Added links to related resources like Valgrind and the 42 Network site to help users explore additional tools and information.
-
-5. **Project Description and Features**: Clearly described the functionality and features of the project to ensure it's easy to understand both for developers and for search engines indexing your content.
-
-This should enhance both user experience and search engine optimization (SEO) for your `README.md` file!
-```
