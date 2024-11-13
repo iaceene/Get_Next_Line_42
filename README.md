@@ -36,6 +36,8 @@ The `get_next_line()` function reads from a file descriptor (which could be a fi
 char *get_next_line(int fd);
 
 ```
+---
+
 ## How to use
 
 ```c
