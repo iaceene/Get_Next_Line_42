@@ -6,7 +6,7 @@
 /*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:27:52 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/13 15:31:01 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:35:28 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	check(char *s)
 {
 	int	i;
 
-    if (!s)
+	if (!s)
 		return (0);
 	i = 0;
 	while (s[i])
