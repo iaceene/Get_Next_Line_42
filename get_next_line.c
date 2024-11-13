@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaajagro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 00:04:11 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/12 00:07:34 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:32:04 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_nextline(char *s)
+static char	*ft_nextline(char *s)
 {
 	int		i;
 	char	*ret;
@@ -38,7 +38,7 @@ char	*ft_nextline(char *s)
 	return (free(s), ret);
 }
 
-int	check(char *s)
+static int	check(char *s)
 {
 	int	i;
 
@@ -52,7 +52,7 @@ int	check(char *s)
 	return (0);
 }
 
-char	*ft_read(char *s, char *buffer, int fd)
+static char	*ft_read(char *s, char *buffer, int fd)
 {
 	int	readed;
 
