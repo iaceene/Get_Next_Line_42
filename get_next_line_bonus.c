@@ -6,7 +6,7 @@
 /*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:27:52 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/13 15:35:28 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/13 17:42:26 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	*get_next_line(int fd)
 	static char	*s[10240];
 	char		*buffer;
 
+	if (fd >= 10240)
+		return (NULL);
 	if (BUFFER_SIZE <= 0 || read(fd, NULL, 0) < 0)
 		return (free(s[fd]), s[fd] = NULL);
 	buffer = malloc(BUFFER_SIZE + 1 * sizeof(char));
