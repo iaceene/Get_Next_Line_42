@@ -6,7 +6,7 @@
 /*   By: yaajagro <yaajagro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:27:52 by yaajagro          #+#    #+#             */
-/*   Updated: 2024/11/13 17:42:26 by yaajagro         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:56:17 by yaajagro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	*ft_nextline(char *s)
 	len = ft_strlen(s) - i;
 	ret = malloc(len + 1);
 	if (!ret)
-		return (NULL);
+		return (free(s), NULL);
 	i++;
 	j = 0;
 	while (s[i])
@@ -85,7 +85,7 @@ char	*get_next_line(int fd)
 		return (free(s[fd]), s[fd] = NULL);
 	buffer = malloc(BUFFER_SIZE + 1 * sizeof(char));
 	if (!buffer)
-		return (NULL);
+		return (free(s[fd]), NULL);
 	s[fd] = ft_read(s[fd], buffer, fd);
 	free(buffer);
 	buffer = s[fd];
