@@ -1,4 +1,4 @@
-# Get Next Line - 42 Project | C Programming
+# Get Next Line
 
 ## Overview
 
